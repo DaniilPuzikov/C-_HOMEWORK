@@ -41,10 +41,13 @@ void PrintArray(int[,] array)
 
 void ToOneLineArray(int[,] array1, int[] array2)
 {
-    for(int i = 0; i<array1.GetLength(0);i++)   
-        for(int j = 0; j<array1.GetLength(1);j++)
-            for(int x = 0; x<array2.Length;x++)
-                array2[x] = array1[i,j];
+    int x=0;
+
+    foreach(int el in array1)
+    {
+        array2[x] = el;
+        x++;
+    }
 }
 
 void PrintArrayOneLine(int[] array)
