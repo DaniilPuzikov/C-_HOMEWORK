@@ -7,7 +7,10 @@ Console.WriteLine("Введите первое неотрицательное ч
 int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе неотрицательное число");
 int b = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"A({a},{b}) = {Akkerman(a,b)}");
+if(a>=0 && b>=0)
+    Console.WriteLine($"A({a},{b}) = {Akkerman(a,b)}");
+else
+Console.WriteLine("Введённые числа должны быть неотрицательными");
 
 int Akkerman(int a, int b)
 {
